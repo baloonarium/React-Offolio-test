@@ -1,0 +1,436 @@
+@font-face {
+	font-family: "BebasNeue-Regular";
+	src: url("../../public/typo/BebasNeue-Regular.ttf") format("opentype");
+}
+
+html {
+	height: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "BebasNeue-Regular";
+	background: linear-gradient(#26334b, #243b55);
+	overflow: hidden;
+	-moz-user-select: none; /* Firefox */
+	-webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
+	-ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
+	user-select: none; /* Propriété standard */
+}
+h4 {
+	position: absolute;
+	top: 0;
+	margin: 10px;
+	left: 0%;
+	color: #fff;
+	font-size: 30px;
+}
+
+.form-container {
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
+}
+
+.form-container ul {
+	position: fixed;
+	margin-top: -700px;
+	padding: 10px;
+	z-index: 101;
+}
+
+.robot {
+	left: 100px;
+	opacity: 0.4;
+}
+
+.register {
+	float: left;
+	display: flex;
+	height: 50px;
+	color: white;
+	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+	border-radius: 10px;
+	background: rgba(0, 0, 0, 0.5);
+	margin: 10px;
+	width: 185px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	transition: 0.5s;
+	letter-spacing: 2px;
+	font-size: 16px;
+	z-index: 102;
+}
+.login {
+	float: left;
+	display: flex;
+	color: white;
+	height: 50px;
+	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+	border-radius: 10px;
+	background: rgba(0, 0, 0, 0.5);
+	margin: 10px;
+	width: 185px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	transition: 0.5s;
+	letter-spacing: 2px;
+	font-size: 16px;
+	z-index: 105;
+}
+
+.register:hover {
+	background: #03e9f4;
+	color: #243b55;
+	box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+		0 0 100px #03e9f4;
+	letter-spacing: 2.5px;
+}
+.login:hover {
+	background: #03e9f4;
+	color: #243b55;
+	box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+		0 0 100px #03e9f4;
+	letter-spacing: 2.5px;
+}
+
+.form-container ul li {
+	display: flex;
+	list-style-type: none;
+}
+
+.login-box {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	padding: 40px;
+	background: rgba(0, 0, 0, 0.5);
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+	border-radius: 10px;
+	z-index: 106;
+}
+
+.login-box h2 {
+	margin: 0 0 50px;
+	padding: 0;
+	color: #fff;
+	text-align: center;
+	letter-spacing: 2px;
+}
+
+.login-box .user-box {
+	position: relative;
+}
+
+.login-box .user-box input {
+	width: 100%;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid #fff;
+	outline: none;
+	background: transparent;
+}
+.login-box .user-box label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff;
+	pointer-events: none;
+	transition: 0.5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+	top: -20px;
+	left: 0;
+	color: #03e9f4;
+	font-size: 16px;
+}
+
+.login-box form a {
+	position: relative;
+	display: inline-block;
+	padding: 10px 20px;
+	color: #03e9f4;
+	font-size: 16px;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	transition: 0.5s;
+	margin-top: 40px;
+	letter-spacing: 2px;
+}
+
+.login-box a:hover {
+	background: #03e9f4;
+	color: #243b55;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+		0 0 100px #03e9f4;
+	letter-spacing: 3px;
+}
+
+.login-box a span {
+	position: absolute;
+	display: block;
+}
+
+.login-box a span:nth-child(1) {
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, #03e9f4);
+	animation: btn-anim1 3s linear infinite;
+}
+
+@keyframes btn-anim1 {
+	0% {
+		left: -100%;
+	}
+	50%,
+	100% {
+		left: 100%;
+	}
+}
+
+.login-box a span:nth-child(2) {
+	top: -100%;
+	right: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(180deg, transparent, #03e9f4);
+	animation: btn-anim2 3s linear infinite;
+	animation-delay: 0.75s;
+}
+
+@keyframes btn-anim2 {
+	0% {
+		top: -100%;
+	}
+	50%,
+	100% {
+		top: 100%;
+	}
+}
+
+.login-box a span:nth-child(3) {
+	bottom: 0;
+	right: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg, transparent, #03e9f4);
+	animation: btn-anim3 3s linear infinite;
+	animation-delay: 1.5s;
+}
+
+@keyframes btn-anim3 {
+	0% {
+		right: -100%;
+	}
+	50%,
+	100% {
+		right: 100%;
+	}
+}
+
+.login-box a span:nth-child(4) {
+	bottom: -100%;
+	left: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(360deg, transparent, #03e9f4);
+	animation: btn-anim4 3s linear infinite;
+	animation-delay: 2.25s;
+}
+
+@keyframes btn-anim4 {
+	0% {
+		bottom: -100%;
+	}
+	50%,
+	100% {
+		bottom: 100%;
+	}
+}
+
+.register-box {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	padding: 40px;
+	background: rgba(0, 0, 0, 0.5);
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+	border-radius: 10px;
+	opacity: 0;
+	z-index: 105;
+}
+
+.register-box h2 {
+	margin: 0 0 50px;
+	padding: 0;
+	color: #fff;
+	text-align: center;
+	letter-spacing: 2px;
+}
+
+.register-box .user-box {
+	position: relative;
+}
+
+.register-box .user-box input {
+	width: 100%;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid #fff;
+	outline: none;
+
+	background: transparent;
+}
+.register-box .user-box label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff;
+	pointer-events: none;
+	transition: 0.5s;
+}
+
+.register-box .user-box input:focus ~ label,
+.register-box .user-box input:valid ~ label {
+	top: -20px;
+	left: 0;
+	color: #03e9f4;
+	font-size: 16px;
+}
+
+.register-box form a {
+	position: relative;
+	display: inline-block;
+	padding: 10px 20px;
+	color: #03e9f4;
+	font-size: 16px;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	transition: 0.5s;
+	margin-top: 40px;
+	letter-spacing: 2px;
+}
+
+.register-box a:hover {
+	background: #03e9f4;
+	color: #243b55;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+		0 0 100px #03e9f4;
+	letter-spacing: 3px;
+}
+
+.register-box a span {
+	position: absolute;
+	display: block;
+}
+
+.register-box a span:nth-child(1) {
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, #03e9f4);
+	animation: btn-anim1 3s linear infinite;
+}
+
+@keyframes btn-anim1 {
+	0% {
+		left: -100%;
+	}
+	50%,
+	100% {
+		left: 100%;
+	}
+}
+
+.register-box a span:nth-child(2) {
+	top: -100%;
+	right: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(180deg, transparent, #03e9f4);
+	animation: btn-anim2 3s linear infinite;
+	animation-delay: 0.75s;
+}
+
+@keyframes btn-anim2 {
+	0% {
+		top: -100%;
+	}
+	50%,
+	100% {
+		top: 100%;
+	}
+}
+
+.register-box a span:nth-child(3) {
+	bottom: 0;
+	right: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg, transparent, #03e9f4);
+	animation: btn-anim3 3s linear infinite;
+	animation-delay: 1.5s;
+}
+
+@keyframes btn-anim3 {
+	0% {
+		right: -100%;
+	}
+	50%,
+	100% {
+		right: 100%;
+	}
+}
+
+.register-box a span:nth-child(4) {
+	bottom: -100%;
+	left: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(360deg, transparent, #03e9f4);
+	animation: btn-anim4 3s linear infinite;
+	animation-delay: 2.25s;
+}
+
+@keyframes btn-anim4 {
+	0% {
+		bottom: -100%;
+	}
+	50%,
+	100% {
+		bottom: 100%;
+	}
+}
