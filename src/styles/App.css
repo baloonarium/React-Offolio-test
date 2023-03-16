@@ -40,7 +40,7 @@ h4 {
 
 .form-container ul {
 	position: fixed;
-	margin-top: -700px;
+	margin-top: -600px;
 	padding: 10px;
 	z-index: 101;
 }
@@ -68,6 +68,7 @@ h4 {
 	font-size: 16px;
 	z-index: 102;
 }
+
 .login {
 	float: left;
 	display: flex;

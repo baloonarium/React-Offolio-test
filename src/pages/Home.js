@@ -1,7 +1,12 @@
 import React from "react";
+import Log from "../components/Route/Log";
 
 const Home = () => {
-	return <div>Hello depuis Home</div>;
+	return (
+		<div>
+			<Log />
+		</div>
+	);
 };
 
 export default Home;
